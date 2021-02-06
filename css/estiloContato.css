@@ -1,0 +1,992 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      /* background-image: url("../img/fundo-gradiente-suave_77528-21.jpg"); */
+      background-image: url("../img/giphy.gif");
+      /* background-color:beige; */
+      background-size: 200vw 200vh ;
+      height: 100vh;
+      font-family: arial;
+    }
+  
+  header .imgmouse {
+      opacity: 1;
+      justify-content: center;
+      justify-items: center;
+      width: 90px;
+      margin-top: 200px;
+      position: absolute;
+      left: 47%;
+    }
+    
+    @media (max-width:420px) {
+      header .imgmouse {
+        justify-content: center;
+        justify-items: center;
+        width: 90px;
+        margin-top: 200px;
+        position: absolute;
+        left: 40%;
+      }
+    }
+  
+    @media (min-width:1880px) {
+      header .imgmouse {
+        justify-content: center;
+        justify-items: center;
+        width: 120px;
+        margin-top: 300px;
+        position: absolute;
+        left: 47%;
+      }
+    }
+  
+  
+    /* Se a tela tiver pelo menos 400px carrega estes estilos */
+    @media (min-width:400px) {
+      body {
+        font-size: 14px;
+      }
+    }
+  
+    header {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .menu {
+      background-color:white;
+      position: fixed;
+      width: 100vw;
+      top: 0;
+    }
+  
+    .menu a {
+      display: block;
+      padding: 10px 20px;
+      background-color: white;
+      transition: 0.3s;
+    }
+  
+    .menu a:active,
+    .menu a:hover {
+      background-color: #00ff;
+      color: white;
+    }
+    
+    .menu ul {
+      display:flex; 
+      justify-content: space-around;
+      
+    }
+    
+    .menu li {
+      list-style:none;
+    }
+  
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+    
+    a:active,
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    .site-title {
+      font-size: 48px;
+    }
+  
+    .site-subtitle,
+    .site-subtitle2,
+    .site-title {
+      text-align:center;
+      color:whitesmoke;
+    }
+    
+    .site-subtitle {
+      font-family:italic; 
+    }
+  
+    .site-subtitle2 {
+      border-right: 2px solid  rgba(255,255,255,0.75);
+      font-family:'Press Start 2P', cursive;
+      padding: 5px;
+      font-size:14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: center;
+    }
+  
+    .digitando-animacao {
+      animation: blinkCursor 500ms steps(40) infinite normal , digita 2s steps(40) 1s normal both;
+    }
+  
+    @keyframes digita {
+      from {
+        width: 0;
+      }
+      to {
+        width: 33.5em;
+      }
+    }
+  
+    @keyframes blinkCursor { 
+      from{
+        border-right: 2px solid  rgba(255,255,255,0.75);
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
+  
+    .portfolio {
+      padding: 2em;
+      position: absolute;
+      top: 25vh;
+      height: 100vh;
+    }
+  
+    .portfolio h2 {
+      font-family: 'Share Tech', sans-serif;
+      color: whitesmoke;
+      font-size: 28px;
+      padding-bottom: 1em;
+    }
+  
+    .portfolio .grid {
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 240px 240px;
+    }
+  
+      .img-portfolio {
+      width: 240px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  
+    .sobre-mim {
+      font-size: 24px;
+      color: whitesmoke;
+      position: fixed;
+      left: 50px;
+      top: 180px;
+      width: 50vw;
+    }
+  
+    .imagem-perfil {
+      width: 500px;
+      position: fixed;
+      left: 850px;
+      top: 180px;
+    }
+  
+    @media screen and (min-width: 250px) {
+      .portfolio .grid {
+      grid-template-columns:repeat(2,120px);
+      justify-content: center;
+      display: grid;
+      gap: .5em;
+      }
+      .img-portfolio {
+      width: 120px;
+      height: 120px;
+      }
+    }
+  
+    @media screen and (min-width: 350px) {
+      .portfolio .grid {
+      grid-template-columns:repeat(2,150px);
+      justify-content: center;
+      display: grid;
+      gap: .5em;
+      }
+      .img-portfolio {
+      width: 150px;
+      height: 150px;
+      }
+    }
+  
+    @media screen and (min-width: 398px) {
+      .portfolio .grid {
+      grid-template-columns:repeat(2,180px);
+      justify-content: center;
+      display: grid;
+      gap: .5em;
+      }
+      .site-title{
+        font-size: 42px;
+      }
+      .img-portfolio {
+      width: 180px;
+      height: 180px;
+      }
+      .site-subtitle2{
+        font-size: 11px;
+      }
+      @keyframes digita {
+        from {
+          width: 0;
+        }
+        to {
+          width: 35em;
+        }
+      }
+    }
+  
+  
+    @media (min-width: 750px) {
+      .portfolio .grid {
+      grid-template-columns: repeat(2,240px);
+      justify-content: center;
+      }
+      .site-title {
+        font-size: 48px;
+      }
+   }
+  
+    @media (min-width: 1200px) {
+      .portfolio .grid {
+      grid-template-columns: repeat(4,240px);
+      justify-content: center;
+      }
+    } 
+    
+    @media (min-width: 1880px) {
+      body {
+        font-size: 22px;
+      }
+      .portfolio .grid {
+      grid-template-columns: repeat(4,300px);
+      justify-content: center;
+      gap: 4em;
+      }
+      .img-portfolio {
+        width: 300px;
+        height: 300px;
+        
+        }
+      
+      .site-title {
+        font-size: 84px;
+      }
+      .site-subtitle {
+        font-size: 52px;
+      }
+      .site-subtitle2 {
+      font-size: 24px;
+      }
+    }
+  
+    .portfolio figure {
+      text-align: center;
+    }
+    
+    .portfolio figure a :active,
+    .portfolio figure a :hover {
+      box-shadow: 0px 0px 20px whitesmoke;
+      transform: scale(1.1);
+      transition: 500ms;
+    }
+  
+  
+    @media (min-width: 1200px) {
+      body {
+        font-size: 32px;
+      }
+  
+    .contatotext {
+      text-align:center;
+      color:whitesmoke;
+      font-size: 44px;
+    }
+  
+    .contatonumero {
+      text-align:left;
+      color:whitesmoke;
+      font-size: 22px;
+    }
+  
+    .portfolio .grid .figcaption {
+      padding: .5em;
+    }
+  
+    .linksecreto {
+      padding: 1px;
+      display:flex; 
+      
+    }
+   
+    @media screen and (min-width: 250px) {
+      .contatotext {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 38px;
+      }
+      .botaomusicasobre {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 257px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 9%;
+      }
+      .contatonumero {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 22px;
+      }
+      .contatoemail {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 14px;
+      }
+      header .sapo2 {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 270px;
+        margin-top: 10px;
+        position: absolute;
+        left: 9%;
+      } 
+    }
+  
+    @media screen and (min-width: 350px) {
+      .contatotext {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 38px;
+      }
+      .botaomusicasobre {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 257px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 9%;
+      }
+      .contatonumero {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 22px;
+      }
+      .contatoemail {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 14px;
+      }
+      header .sapo2 {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 290px;
+        margin-top: 10px;
+        position: absolute;
+        left: 11%;
+      } 
+      }
+      
+  
+    @media screen and (min-width: 398px) {
+      .contatotext {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 44px;
+      }
+      .botaomusicasobre {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 244px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 9%;
+      }
+      .contatonumero {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 22px;
+      }
+      .contatoemail {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 14px;
+      }
+      header .sapo2 {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 300px;
+        margin-top: 10px;
+        position: absolute;
+        left: 13%;
+      } 
+    }
+  
+    @media screen and (min-width: 750px) {
+      body {
+        font-size: 22px;
+      }
+      .contatotext {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 44px;
+      }
+      .botaomusicasobre {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 307px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 10%;
+      }
+      .contatonumero {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 28px;
+      }
+      .contatoemail {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 18px;
+      }
+      header .sapo2 {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 350px;
+        margin-top: 10px;
+        position: absolute;
+        left: 33%;
+      } 
+    }
+  
+    @media screen and (min-width: 1000px) {
+      body {
+        font-size: 22px;
+      }
+      .contatotext {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 64px;
+      }
+      .botaomusicasobre {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 372px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 9%;
+      }
+      .contatonumero {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 34px;
+      }
+      .contatoemail {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 21px;
+      }
+      header .sapo2 {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 417px;
+        margin-top: 10px;
+        position: absolute;
+        left: 31%;
+      } 
+      } 
+  
+    @media screen and (min-width: 1300px) {
+      body {
+        font-size: 22px;
+      }
+      .botaomusicasobre {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 280px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 9%;
+      }
+      .contatotext {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 44px;
+      }
+      .contatonumero {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 22px;
+      }
+      .contatoemail {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 16px;
+      }
+      header .sapo2 {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 290px;
+        margin-top: 10px;
+        position: absolute;
+        left: 40%;
+      } 
+        } 
+    
+    @media screen and (min-width: 1880px) {
+      body {
+        font-size: 32px;
+      }
+      .contatotext {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 102px;
+      }
+      .botaomusicasobre {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 607px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 7%;
+      }
+      .contatonumero {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 56px;
+      }
+      .contatoemail {
+        text-align:center;
+        color:whitesmoke;
+        font-size: 34px;
+      }
+      header .sapo2 {
+        opacity: 1;
+        justify-content: center;
+        justify-items: center;
+        width: 571px;
+        margin-top: 10px;
+        position: absolute;
+        left: 34%;
+      }  
+    }
+    .divcoment .yoda {
+      opacity: 1;
+      padding: 5px;
+      justify-content: center;
+      justify-items: center;
+      width: 300px;
+      margin-top: 10px;
+      margin-left: 20px;
+      position: relative;
+      left: auto;
+    }
+    #app #botao {
+      background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Facebook_logo_thumbs_up_like_transparent_SVG.svg);
+      background-color: #e7e9f1;
+      color: #385596;
+      background-size: 50px;
+      background-position: 20px 25%;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 59px;
+      font-size: 20px;
+      border: 1px solid #a8b4c9;
+      text-align: center;
+      text-indent: 32px;   
+  }
+    @media screen and (min-width: 250px) {
+      #app a {
+        color: red;
+      }
+      #app .listinha {
+        margin-top: -237px;
+        position: absolute;
+        left: 79px;
+        color: white;
+      }
+      .divcoment .yoda {
+        opacity: 1;
+        padding: 2px;
+        justify-content: center;
+        justify-items: center;
+        width: 200px;
+        margin-top: 65px;
+        margin-left: -32px;
+        position: absolute;
+        left: 29%;
+      }
+      #app #botao {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Facebook_logo_thumbs_up_like_transparent_SVG.svg);
+        background-color: #e7e9f1;
+        color: #385596;
+        background-size: 50px;
+        background-position: 20px 25%;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 59px;
+        font-size: 20px;
+        border: 1px solid #a8b4c9;
+        text-align: center;
+        text-indent: 32px;
+        position: absolute;
+        left: 61px;
+      }
+      #app #valor {
+        position: absolute;
+        left: 60px;
+        margin-top: -26px;
+  
+      }
+      #app button.botaoadd {
+        position: absolute;
+        left: 210px;
+        margin-top: -25px;
+      }
+    }
+    @media screen and (min-width: 350px) {
+      #app a {
+        color: red;
+      }
+      #app .listinha {
+        margin-top: -279px;
+        position: absolute;
+        left: 32px;
+        color: white;
+      }
+      .divcoment .yoda {
+        opacity: 1;
+        padding: 2px;
+        justify-content: center;
+        justify-items: center;
+        width: 240px;
+        margin-top: 65px;
+        margin-left: -32px;
+        position: absolute;
+        left: 25%;
+      }
+      #app #botao {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Facebook_logo_thumbs_up_like_transparent_SVG.svg);
+        background-color: #e7e9f1;
+        color: #385596;
+        background-size: 50px;
+        background-position: 20px 25%;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 59px;
+        font-size: 20px;
+        border: 1px solid #a8b4c9;
+        text-align: center;
+        text-indent: 32px;
+        position: absolute;
+        left: 84px;
+      }
+      #app #valor {
+        position: absolute;
+        left: 84px;
+        margin-top: -26px;
+  
+      }
+      #app button.botaoadd {
+        position: absolute;
+        left: 233px;
+        margin-top: -25px;
+      }
+    }
+  
+    @media screen and (min-width: 398px) {
+      #app a {
+        color: red;
+      }
+      #app .listinha {
+        margin-top: -319px;
+        position: absolute;
+        left: 32px;
+        color: white;
+      }
+      .divcoment .yoda {
+        opacity: 1;
+        padding: 5px;
+        justify-content: center;
+        justify-items: center;
+        width: 275px;
+        margin-top: 65px;
+        margin-left: -32px;
+        position: absolute;
+        left: 24%;
+      }
+      #app #botao {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Facebook_logo_thumbs_up_like_transparent_SVG.svg);
+        background-color: #e7e9f1;
+        color: #385596;
+        padding: 5px;
+        background-size: 50px;
+        background-position: 20px 25%;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 59px;
+        font-size: 20px;
+        border: 1px solid #a8b4c9;
+        text-align: center;
+        text-indent: 32px;
+        position: absolute;
+        left: 106px;
+      }
+      #app #valor {
+        position: absolute;
+        left: 105px;
+        margin-top: -25px;
+      }
+      #app button.botaoadd {
+        position: absolute;
+        height: 21px;
+        left: 255px;
+        margin-top: -27px;
+        padding-left: 1px;
+      }
+    }
+    
+    @media screen and (min-width: 750px) {
+      #app a {
+        color: red;
+      }
+      #app .listinha {
+        margin-top: -319px;
+        position: absolute;
+        left: 32px;
+        color: white;
+      }
+      .divcoment .yoda {
+        opacity: 1;
+        padding: 2px;
+        justify-content: center;
+        justify-items: center;
+        width: 298px;
+        margin-top: 65px;
+        margin-left: -32px;
+        position: absolute;
+        left: 37%;
+      }
+      #app #botao {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Facebook_logo_thumbs_up_like_transparent_SVG.svg);
+        background-color: #e7e9f1;
+        color: #385596;
+        background-size: 50px;
+        background-position: 20px 25%;
+        background-repeat: no-repeat;
+        width: 233px;
+        height: 66px;
+        font-size: 20px;
+        border: 1px solid #a8b4c9;
+        text-align: center;
+        text-indent: 32px;
+        position: absolute;
+        left: 380px;
+        margin-top: -12px;
+      }
+      #app #valor {
+        position: absolute;
+        width: 174px;
+        height: 22px;
+        left: 381px;
+        margin-top: -43px;
+  
+      }
+      #app button.botaoadd {
+        position: absolute;
+        height: 22px;
+        border-radius: 7px;
+        left: 561px;
+        margin-top: -42px;
+      }
+    }
+    @media screen and (min-width: 1000px) {
+      .divcoment .yoda {
+        opacity: 1;
+        padding: 2px;
+        justify-content: center;
+        justify-items: center;
+        width: 320px;
+        margin-top: 65px;
+        margin-left: -32px;
+        position: absolute;
+        left: 38%;
+      }
+      #app #botao {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Facebook_logo_thumbs_up_like_transparent_SVG.svg);
+        background-color: #e7e9f1;
+        color: #385596;
+        background-size: 50px;
+        background-position: 20px 25%;
+        background-repeat: no-repeat;
+        width: 261px;
+        height: 72px;
+        font-size: 20px;
+        border: 1px solid #a8b4c9;
+        text-align: center;
+        text-indent: 32px;
+        position: absolute;
+        left: 422px;
+        margin-top: -12px;
+      }
+      #app #valor {
+        position: absolute;
+        width: 192px;
+        height: 25px;
+        left: 429px;
+        margin-top: -45px;
+  
+      }
+      #app button.botaoadd {
+        position: absolute;
+        height: 24px;
+        border-radius: 7px;
+        left: 631px;
+        margin-top: -44px;
+      }
+    }
+    @media screen and (min-width: 1300px) {
+      body {
+        font-size: 20px;
+      }
+      #app .listinha {
+        margin-top: -100px;
+        position: absolute;
+        left:402px;
+      }
+      .divcoment .yoda {
+        opacity: 1;
+        padding: 2px;
+        justify-content: center;
+        justify-items: center;
+        width: 320px;
+        margin-top: 65px;
+        margin-left: -32px;
+        position: absolute;
+        left:41%;
+      }
+      #app #botao {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Facebook_logo_thumbs_up_like_transparent_SVG.svg);
+        background-color: #e7e9f1;
+        color: #385596;
+        background-size: 63px;
+        background-position: 20px 25%;
+        background-repeat: no-repeat;
+        width: 278px;
+        height: 74px;
+        font-size: 24px;
+        border: 1px solid #a8b4c9;
+        text-align: center;
+        text-indent: 32px;
+        position: absolute;
+        left: 580px;
+        margin-top: -15px;
+      }
+      #app #valor {
+        position: absolute;
+        width: 192px;
+        height: 25px;
+        left: 580px;
+        font-size: 19px;
+        margin-top: -48px;
+      }
+      #app button.botaoadd {
+        position: absolute;
+        height: 22px;
+        border-radius: 7px;
+        font-size: 16px;
+        left: 787px;
+        margin-top: -46px;
+      }
+    }
+  
+    @media screen and (min-width: 1880px) {
+      #app a {
+        color: red;
+      }
+      #app .listinha {
+        margin-top: -450px;
+        position: absolute;
+        left: 45px;
+        color: white;
+      }
+      body {
+        font-size: 32px;
+      }
+      .divcoment .yoda {
+        opacity: 1;
+        padding: 2px;
+        justify-content: center;
+        justify-items: center;
+        width: 455px;
+        margin-top: 65px;
+        margin-left: -32px;
+        position: absolute;
+        left: 38%;
+      }
+      #app #botao {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Facebook_logo_thumbs_up_like_transparent_SVG.svg);
+        background-color: #e7e9f1;
+        color: #385596;
+        background-size: 74px;
+        background-position: 20px 25%;
+        background-repeat: no-repeat;
+        width: 328px;
+        height: 83px;
+        font-size: 30px;
+        border: 1px solid #a8b4c9;
+        text-align: center;
+        text-indent: 32px;
+        position: absolute;
+        left: 761px;
+        margin-top: -25px;
+      }
+      #app #valor {
+        position: absolute;
+        width: 221px;
+        height: 28px;
+        left: 761px;
+        font-size: 21px;
+        margin-top: -60px;
+      }
+      #app button.botaoadd {
+        position: absolute;
+        height: 29px;
+        border-radius: 7px;
+        font-size: 22px;
+        left: 999px;
+        margin-top: -60px;
+      }
+    }
+  
+    .bota {
+      position: fixed;
+    }
+  }

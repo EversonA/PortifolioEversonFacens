@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Everson Andujas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="comentario.html">Comentario</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h1 class="site-title">Everson Andujas</h1>
+      <h2 class="site-subtitle">Cursando Engenharia Elétrica</h2>
+      <h2 class="site-subtitle2 digitando-animacao">Programador Jr. nas horas vagas</h2>
+      <img class="imgmouse" src="img/mv2.gif" alt="MDN Logo" />
+    </div>
+  </header>
+
+  <section class="portfolio">
+
+    <h2>Links:</h2>
+
+    <div class="grid">
+
+      <figure>
+        <a href="http://instagram.com.br/eversonandujas">
+          <img class="img-portfolio" src="./img/insta.png" alt="Instagram">
+        </a>
+        <figcaption class="figcaption">Instagram</figcaption>
+      </figure>
+
+      <figure>
+        <a href="mailto:everson-andujascarlos@hotmail.com">
+          <img class="img-portfolio" src="./img/applemail.png" alt=">E-mail">
+        </a>
+        <figcaption class="figcaption">E-mail</figcaption>
+      </figure>
+
+      <figure>
+        <a href="https://github.com/EversonA">
+          <img class="img-portfolio" src="./img/iconfinder_github_square_black_107109.png" alt="GitHub">
+        </a>
+        <figcaption class="figcaption">GitHub</figcaption>
+      </figure>
+
+      <figure>
+        <a href="https://eversona.github.io/calcularcorrida/">
+          <img class="img-portfolio" src="./img/Appcorrida.png" alt="App calcular corrida">
+        </a>
+        <figcaption class="figcaption">App calcular corrida</figcaption>
+      </figure>
+
+    </div>
+  </section>
+  </script>
+  <script></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      $('.imgmouse').stop().animate(
+        { opacity: ((180 - scroll) / 100) + 0.1 },
+        "slow"
+      );
+    });
+  </script>
+</body>
+
+</html>
